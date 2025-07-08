@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body onload=" getLocation()">
+    <div class="container text-center">
+      <h1 class="mt-4 display-6 fw-bold text-white">WEATHER</h1>
+      <p class="fst-italic text-white fw-bold">your direct line to the sky</p>
+      <!-- --------------------------------------------------------------------- -->
+      <div class="weather-container mx-auto shadow col-md-8">
+        <!-- ------------search start-------------------- -->
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            id="input-box"
+            class="form-control"
+            placeholder="Enter city name"
+            autocomplete="off"
+          />
+          <button type="button" class="btn btn-outline-secondary" id="button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <!-- ---------------search end----------------- -->
+        <!----- error div start------>
+        <div id="error-message" class="alert alert-danger d-none" role="alert">
+          City Not Found ! Please Enter Valid City Name.
+        </div>
+        <!----error div end --------->
+
+        <!-----weather body start ----->
+        <div class="weather-body d-none" id="weather-body">
+          <div class="mb-3">
+            <h3 id="city">Bhopal,IN</h3>
+            <p id="date">Monday , 9 june , 2025</p>
+          </div>
+          <div class="mb-3">
+            <h3 id="temp">30'C</h3>
+            <p id="min-max">30'C (min) / 32'C (max)</p>
+            <p id="weather">Clear</p>
+          </div>
+          <!-- images humidity wind .. -->
+          <div class="row text-center">
+            <!--  -->
+            <div class="col-md-4">
+              <div class="card info-card">
+                <div class="card-body">
+                  <img src="/Media/Images/icons-humidity.jpg" />
+                  <p class="mt-2" id="humidity">41%</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="col-md-4">
+              <div class="card info-card">
+                <div class="card-body">
+                  <img src="/Media/Images/icon-wind.jpg" />
+                  <p class="mt-2" id="wind">8 Kmph</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="col-md-4">
+              <div class="card info-card">
+                <div class="card-body">
+                  <img src="/Media/Images/icons-guage.jpg" />
+                  <p class="mt-2" id="pressure">105hp</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+          </div>
+          <!-- images humidity wind end.. -->
+        </div>
+        <!----- weather body end ----->
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
