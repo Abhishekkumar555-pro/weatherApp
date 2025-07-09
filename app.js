@@ -93,18 +93,18 @@ function formatDate(date) {
 
 function updateBackground(weatherType) {
   const backgrounds = {
-    Clear: "/Media/Images/clear.jpg",
-    Clouds: "/Media/Images/cloudes.jpg",
-    Haze: "/Media/Images/cloudes.jpg",
-    Rain: "/Media/Images/rain.jpg",
-    Thunderstorm: "/Media/Images/thunder.jpg",
-    Sunny: "/Media/Images/sunny.jpeg",
-    Snow: "/Media/Images/snow.jpg",
-    Spring: "/Media/Images/spring.jpg",
+    Clear: "Media/Images/clear.jpg",
+    Clouds: "Media/Images/cloudes.jpg",
+    Haze: "Media/Images/cloudes.jpg",
+    Rain: "Media/Images/rain.jpg",
+    Thunderstorm: "Media/Images/thunder.jpg",
+    Sunny: "Media/Images/sunny.jpeg",
+    Snow: "Media/Images/snow.jpg",
+    Spring: "Media/Images/spring.jpg",
   };
 
   document.body.style.backgroundImage = `url(${
-    backgrounds[weatherType] || "/Media/Images/clear.jpg"
+    backgrounds[weatherType] || "Media/Images/clear.jpg"
   })`;
 }
 
