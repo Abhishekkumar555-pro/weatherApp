@@ -1,5 +1,5 @@
 body {
-  background: url("/Media/Images/clear.jpg") no-repeat center center fixed;
+  background: url("Media/Images/clear.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 .weather-container {
